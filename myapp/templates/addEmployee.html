@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- content specific to child template -->
+<div class="container">
+
+    <form method="post" class="post-form" action="">
+        {% csrf_token %}
+        {{ form.as_p}}
+
+        <button type="submit">Submit</button>
+    </form>
+  
+</div>
+{% endblock %}

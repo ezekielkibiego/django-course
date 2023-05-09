@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %}My Child Page{% endblock %}
+
+
+{% block content %}
+<!-- content specific to child template -->
+<div class="container">
+  <p>{% for employee in employees %}</p>
+  <p>{{ employee.name }}</p>
+  <p>{{ employee.email }}</p>
+  <p>{{ employee.job_title }}</p>
+  <p>{{ employee.salary }}</p>
+  <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+
+  
+  {% endfor %}
+
+  <div class="">
+
+  </div>
+  <div class="">
+    <a href="/addEmployee"> Add New Employee</a>
+  </div>
+</div>
+{% endblock %}
