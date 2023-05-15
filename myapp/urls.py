@@ -11,4 +11,5 @@ urlpatterns = [
     path('delete/<int:id>', views.destroy),   
     path('profile/', views.profile, name='profile'),
     path('accounts/profile/', views.profile,name='profile'),
+    path('api/employees/', views.EmployeeList.as_view()),
     ]
